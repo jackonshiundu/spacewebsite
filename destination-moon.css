@@ -1,0 +1,124 @@
+:root{
+    --primary-color:rgb(11,13,23);
+    --primary-color-variant:rgb(208,214,249);
+    --color-white:rgb(255,255,255);
+}
+body{
+    background: url(./assets/destination/background-destination-desktop.jpg);
+    background-size: cover;
+}
+
+
+.destination__container{
+    display: flex;
+
+}
+.destinationleft__part{
+    position: relative;
+    flex: 1;
+}
+.destinationleft__top{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+.destinationleft__top h1{
+    z-index: -1;
+}
+.destinationleft__top span{
+    font-size: 20px;
+    padding-right: 10px;
+    color: var(--primary-color-variant);
+}
+.destinationleft__part img{
+    position: absolute;
+    width: 60%;
+    top: 9rem;
+    left: 4rem;
+    z-index: -1;
+}
+
+
+.destinationright__part{
+    padding: 2rem;
+    flex: 1;
+}
+
+.destinationright__part ul{
+    display: flex;
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 20px;
+
+}
+.destinationright__part ul li a{
+    color:var(--color-white);
+    text-transform: uppercase;
+
+}
+.destinationright__part h1{
+    color: var(--color-white);
+    font-size: 100px;
+}
+.destinationright__part p{
+    color: var(--primary-color-variant);
+    position: relative;
+}
+.destinationright__part p::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: gray;
+    left: 0;
+    bottom: -30px;
+}
+
+.timeanddistance__wrapper{
+    margin-top: 3rem;
+    display: flex;
+    gap: 3rem;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width:1024px){
+    body{
+        background: url(./assets/destination/background-destination-tablet.jpg);
+        background-size: cover;
+    }
+
+    .destination__container{
+        flex-direction: column;
+    }
+    .destinationleft__part img{
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .destinationright__part{
+        margin-top: 40vh;
+        align-items: center;
+        text-align: center;
+    }
+    .destinationright__part ul{
+        margin-left: 2rem;
+    }
+}
+@media screen and (max-width:600px){
+    body{
+        background: url(./assets/destination/background-destination-mobile.jpg);
+        background-size: cover;
+    }
+    .destinationleft__top h1{
+        font-size: 20px;
+    }
+    .destinationright__part ul{
+        margin-left: 0;
+    }
+}
+
+

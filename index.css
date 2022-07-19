@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Finlandica:wght@400;600&display=swap');
+:root{
+    --primary-color:rgb(11,13,23);
+    --primary-color-variant:rgb(208,214,249);
+    --color-white:rgb(255,255,255);
+}
+
+body{
+    background: url(./assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    font-family: 'Bellefair', serif;
+
+}
+*{
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 500ms ease-in-out;
+}
+nav{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav span{
+    z-index: 1;
+    position: absolute;
+    left: 15%;
+    width: 27rem;
+    height: .1rem;
+    top: 11%;
+    background: gray;
+}
+i.fa-bars{
+    display: none;
+}
+i.fa-times{
+    display: none;
+    z-index: 20;
+}
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.right__part {
+    backdrop-filter: blur(12px);
+    width: 50%;
+    padding: 1.1rem;
+    z-index: 100;
+}
+.right__part ul{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.right__part ul li a{
+    color: white;
+    position: relative;
+    padding-bottom: 1rem;
+}
+a.active{
+    border-bottom: 2px solid #fff;
+    
+    
+}
+/*------------------------home-----------------------------*/
+.homecontainer__wrapper{
+    display: flex;
+    height: 80vh;
+    gap: 6rem;
+    align-items: center;
+}
+.homecontainer__wrapper .homeleft__part{
+    flex: 1;
+}
+.homecontainer__wrapper .homeleft__part h5{
+    font-size: 28px;
+    color: var(--color-white);
+}
+.homecontainer__wrapper .homeleft__part h1{
+    font-size: 150px;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+.homecontainer__wrapper .homeleft__part p{
+    color: var(--color-white);
+}
+
+.homecontainer__wrapper .homeright__part{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homecontainer__wrapper .homeright__part button{
+    width: 10rem;
+    aspect-ratio:1/1;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.homecontainer__wrapper .homeright__part button:hover{
+    outline: 4rem solid rgba(255,255,255,0.2);
+
+}
+
+
+
+
+/*------------------------media for tablets-----------------------------*/
+@media screen and (max-width:1024px){
+    body{
+        background: url(./assets/home/background-home-tablet.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    nav span {
+        width: 0;
+    }
+    .homecontainer__wrapper {
+        height: fit-content;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+/*-----------------media queries for mobiles---------------------------*/
+@media screen and (max-width:600px) {
+    body{
+        background: url(./assets/home/background-home-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    .right__part{
+        visibility: hidden;
+        position: absolute;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 180%;
+        right: 1rem;
+
+
+    }
+    .right__part ul{
+        top: 50%;
+        transform: translateY(20%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    i.fa-bars{
+        display: inline-block;
+        margin-right: 4rem;
+        font-size: 2rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    i.fa-times{
+        z-index: 200;
+        margin-right: 4rem;
+        font-size: 2rem;
+        color: var(--color-white);
+        cursor: pointer;
+        }
+    .homecontainer__wrapper .homeleft__part h1{
+        font-size: 80px;
+    }
+}

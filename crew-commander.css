@@ -1,0 +1,104 @@
+:root{
+    --primary-color:rgb(11,13,23);
+    --primary-color-variant:rgb(208,214,249);
+    --color-white:rgb(255,255,255);
+}
+body{
+    background: url(./assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+}
+.crew__container{
+    display: flex;
+    height: 90vh;
+    gap: 2rem;
+}
+.crewleft__part{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.crewleft__top{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+.crewleft__top h1{
+    z-index: -1;
+}
+.crewleft__top span{
+    font-size: 20px;
+    padding-right: 10px;
+    color: var(--primary-color-variant);
+}
+.crew__content h2{
+    color: var(--primary-color-variant);
+}
+.crew__content h1{
+    color: var(--color-white);
+    font-size: 35px;
+    margin: 16px 0;
+}
+.crew__content p{
+    color: var(--color-white);
+}
+.crewleft__part .crew__links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+}
+.crewleft__part .crew__links a{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid var(--color-white);
+    
+}
+.crewleft__part .crew__links a.active{
+    background:var(--color-white);
+    
+}
+
+.crewright__part{
+    flex:1;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+}
+.crewright__part img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width:1024px){
+    body{
+        background: url(./assets/crew/background-crew-tablet.jpg);
+    }
+    .crew__container{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .crew__content h2{
+        margin-top: 2rem;
+    }
+    .crewleft__part .crew__links {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    .crew__content{
+    text-align: center;
+    }
+}
+
+@media screen and (max-width:600px){
+    body{
+        background: url(./assets/crew/background-crew-mobile.jpg);
+    }
+}
